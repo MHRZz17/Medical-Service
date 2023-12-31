@@ -1,4 +1,4 @@
-namespace Medical_Service
+namespace Form1
 {
     internal static class Program
     {
