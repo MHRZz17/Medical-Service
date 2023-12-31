@@ -26,7 +26,20 @@ namespace Medical_Service
 
         private void button3_Click(object sender, EventArgs e)
         {
-            textBox1.Text = string.Empty;
+            tb_nam_kala.Text = string.Empty;
+            tb_arze_kala.Text = string.Empty;
+            tb_brand_parche.Text = string.Empty;
+            tb_code_kala.Text = string.Empty;
+            tb_germaj_kala.Text = string.Empty;
+            tb_gheymat_kala.Text = string.Empty;
+            tb_rang_kala.Text = string.Empty;
+            tb_tedad_kala.Text = string.Empty;
+            tb_tole_kala.Text = string.Empty;
+            tb_vazn_kala.Text = string.Empty;
+            tb_tozihat_kala.Text = string.Empty;
+            cb_noye_kala.Text = string.Empty;
+            cb_size_kala.Text = string.Empty;
+            cb_vahed_kala.Text = string.Empty;
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -36,20 +49,23 @@ namespace Medical_Service
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            /*SqlConnection sc = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\gheir\source\repos\DB_Example\DB_Example\Database2.mdf;Integrated Security=True");
+
+        }
+
+        private void Form6_Load(object sender, EventArgs e)
+        {
+            SqlConnection sc = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=""E:\Program Files\Medical Service\Medical Service\MedicalService.mdf"";Integrated Security=True");
             sc.Open();
-            string query = "SELECT name FROM products";
+            string query = "SELECT k_nam FROM kala";
             SqlCommand command = new SqlCommand(query, sc);
-
             SqlDataReader reader = command.ExecuteReader();
-
             while (reader.Read())
             {
-                string name = reader["name"].ToString();
-                comboBox1.Items.Add(name);
+                string nam = reader["k_nam"].ToString();
+                list_kala.Items.Add(nam);
             }
 
-            sc.Close();*/
+            sc.Close();
         }
     }
 }

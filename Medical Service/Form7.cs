@@ -5,6 +5,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
+using System.Reflection.Metadata;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -26,31 +27,36 @@ namespace Medical_Service
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            /*SqlConnection sc = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\gheir\source\repos\DB_Example\DB_Example\Database2.mdf;Integrated Security=True");
-            sc.Open();
-            string query = "SELECT name FROM products";
-            SqlCommand command = new SqlCommand(query, sc);
 
-            SqlDataReader reader = command.ExecuteReader();
-
-            while (reader.Read())
-            {
-                string name = reader["name"].ToString();
-                comboBox1.Items.Add(name);
-            }
-
-            sc.Close();*/
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            /*string name = comboBox1.SelectedItem.ToString();
-            SqlConnection sc = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\gheir\source\repos\DB_Example\DB_Example\Database2.mdf;Integrated Security=True");
-            sc.Open();
-            string query = "DELETE FROM products WHERE name='" + name + "'";
-            SqlCommand command = new SqlCommand(query, sc);
-            command.ExecuteNonQuery();
-            sc.Close();*/
+            try
+            {
+                DialogResult result = MessageBox.Show("آیا مطمیین هستید که میخوایید تمام کالا ها را حذف کنید؟", "حذف کالا",
+                    MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (result == DialogResult.Yes)
+                {
+                    SqlConnection sc =
+                        new SqlConnection(
+                            @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=""E:\Program Files\Medical Service\Medical Service\MedicalService.mdf"";Integrated Security=True");
+                    sc.Open();
+                    string query = "DELETE FROM kala";
+                    SqlCommand command = new SqlCommand(query, sc);
+                    command.ExecuteNonQuery();
+                    sc.Close();
+                    MessageBox.Show("حذف کل با موفقیت انجام شد!!!");
+                }
+                else
+                {
+                    return;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("حذف کل با خطا مواجه شد!!!");
+            }
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)
@@ -73,13 +79,49 @@ namespace Medical_Service
 
         private void button1_Click(object sender, EventArgs e)
         {
-            /*string name = comboBox1.SelectedItem.ToString();
-            SqlConnection sc = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\gheir\source\repos\DB_Example\DB_Example\Database2.mdf;Integrated Security=True");
+            try
+            {
+                DialogResult result = MessageBox.Show("آیا مطمیین هستید که میخوایید این کالا را حذف کنید؟", "حذف کالا",
+                    MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (result == DialogResult.Yes)
+                {
+                    string kala = list_kala.SelectedItem.ToString();
+                    SqlConnection sc =
+                        new SqlConnection(
+                            @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=""E:\Program Files\Medical Service\Medical Service\MedicalService.mdf"";Integrated Security=True");
+                    sc.Open();
+                    string query = "DELETE FROM kala WHERE k_nam='" + kala + "'";
+                    SqlCommand command = new SqlCommand(query, sc);
+                    command.ExecuteNonQuery();
+                    sc.Close();
+                    MessageBox.Show("حذف با موفقیت انجام شد!!!");
+                }
+                else
+                {
+                    return;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("حذف با خطا مواجه شد!!!");
+            }
+
+        }
+
+        private void Form7_Load(object sender, EventArgs e)
+        {
+            SqlConnection sc = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=""E:\Program Files\Medical Service\Medical Service\MedicalService.mdf"";Integrated Security=True");
             sc.Open();
-            string query = "DELETE FROM products WHERE name='" + name + "'";
+            string query = "SELECT k_nam FROM kala";
             SqlCommand command = new SqlCommand(query, sc);
-            command.ExecuteNonQuery();
-            sc.Close();*/
+            SqlDataReader reader = command.ExecuteReader();
+            while (reader.Read())
+            {
+                string nam = reader["k_nam"].ToString();
+                list_kala.Items.Add(nam);
+            }
+
+            sc.Close();
         }
     }
 }

@@ -29,18 +29,18 @@
         private void InitializeComponent()
         {
             button2 = new Button();
-            button3 = new Button();
-            button4 = new Button();
+            sabt_kala = new Button();
+            namayesh_kala = new Button();
             button5 = new Button();
             button6 = new Button();
             button7 = new Button();
             button8 = new Button();
-            button10 = new Button();
+            virayesh_kala = new Button();
             button11 = new Button();
             button1 = new Button();
             button9 = new Button();
             groupBox1 = new GroupBox();
-            groupBox2 = new GroupBox();
+            gb_kala = new GroupBox();
             groupBox3 = new GroupBox();
             menuStrip1 = new MenuStrip();
             تنظیماتToolStripMenuItem = new ToolStripMenuItem();
@@ -59,7 +59,7 @@
             button14 = new Button();
             button15 = new Button();
             groupBox1.SuspendLayout();
-            groupBox2.SuspendLayout();
+            gb_kala.SuspendLayout();
             groupBox3.SuspendLayout();
             menuStrip1.SuspendLayout();
             statusStrip1.SuspendLayout();
@@ -80,27 +80,27 @@
             button2.UseVisualStyleBackColor = true;
             button2.Click += button2_Click;
             // 
-            // button3
+            // sabt_kala
             // 
-            button3.Font = new Font("Mj_Heritage Two Bold", 16.2F, FontStyle.Bold, GraphicsUnit.Point);
-            button3.Location = new Point(33, 26);
-            button3.Name = "button3";
-            button3.Size = new Size(181, 80);
-            button3.TabIndex = 2;
-            button3.Text = "ثبت کالا";
-            button3.UseVisualStyleBackColor = true;
-            button3.Click += button3_Click;
+            sabt_kala.Font = new Font("Mj_Heritage Two Bold", 16.2F, FontStyle.Bold, GraphicsUnit.Point);
+            sabt_kala.Location = new Point(33, 26);
+            sabt_kala.Name = "sabt_kala";
+            sabt_kala.Size = new Size(181, 80);
+            sabt_kala.TabIndex = 2;
+            sabt_kala.Text = "ثبت کالا";
+            sabt_kala.UseVisualStyleBackColor = true;
+            sabt_kala.Click += button3_Click;
             // 
-            // button4
+            // namayesh_kala
             // 
-            button4.Font = new Font("Mj_Heritage Two Bold", 16.2F, FontStyle.Bold, GraphicsUnit.Point);
-            button4.Location = new Point(33, 202);
-            button4.Name = "button4";
-            button4.Size = new Size(181, 80);
-            button4.TabIndex = 3;
-            button4.Text = "نمایش کالا";
-            button4.UseVisualStyleBackColor = true;
-            button4.Click += button4_Click;
+            namayesh_kala.Font = new Font("Mj_Heritage Two Bold", 16.2F, FontStyle.Bold, GraphicsUnit.Point);
+            namayesh_kala.Location = new Point(33, 202);
+            namayesh_kala.Name = "namayesh_kala";
+            namayesh_kala.Size = new Size(181, 80);
+            namayesh_kala.TabIndex = 3;
+            namayesh_kala.Text = "نمایش کالا";
+            namayesh_kala.UseVisualStyleBackColor = true;
+            namayesh_kala.Click += button4_Click;
             // 
             // button5
             // 
@@ -143,16 +143,16 @@
             button8.Text = "ارسال کالا";
             button8.UseVisualStyleBackColor = true;
             // 
-            // button10
+            // virayesh_kala
             // 
-            button10.Font = new Font("Mj_Heritage Two Bold", 16.2F, FontStyle.Bold, GraphicsUnit.Point);
-            button10.Location = new Point(33, 112);
-            button10.Name = "button10";
-            button10.Size = new Size(181, 80);
-            button10.TabIndex = 10;
-            button10.Text = "ویرایش کالا";
-            button10.UseVisualStyleBackColor = true;
-            button10.Click += button10_Click;
+            virayesh_kala.Font = new Font("Mj_Heritage Two Bold", 16.2F, FontStyle.Bold, GraphicsUnit.Point);
+            virayesh_kala.Location = new Point(33, 112);
+            virayesh_kala.Name = "virayesh_kala";
+            virayesh_kala.Size = new Size(181, 80);
+            virayesh_kala.TabIndex = 10;
+            virayesh_kala.Text = "ویرایش کالا";
+            virayesh_kala.UseVisualStyleBackColor = true;
+            virayesh_kala.Click += button10_Click;
             // 
             // button11
             // 
@@ -193,24 +193,24 @@
             groupBox1.Controls.Add(button9);
             groupBox1.Controls.Add(button1);
             groupBox1.Controls.Add(button2);
-            groupBox1.Location = new Point(290, 25);
+            groupBox1.Location = new Point(290, 74);
             groupBox1.Name = "groupBox1";
             groupBox1.Size = new Size(277, 305);
             groupBox1.TabIndex = 12;
             groupBox1.TabStop = false;
             groupBox1.Text = "groupBox1";
             // 
-            // groupBox2
+            // gb_kala
             // 
-            groupBox2.Controls.Add(button3);
-            groupBox2.Controls.Add(button10);
-            groupBox2.Controls.Add(button4);
-            groupBox2.Location = new Point(23, 25);
-            groupBox2.Name = "groupBox2";
-            groupBox2.Size = new Size(261, 305);
-            groupBox2.TabIndex = 13;
-            groupBox2.TabStop = false;
-            groupBox2.Text = "groupBox2";
+            gb_kala.Controls.Add(sabt_kala);
+            gb_kala.Controls.Add(virayesh_kala);
+            gb_kala.Controls.Add(namayesh_kala);
+            gb_kala.Location = new Point(12, 74);
+            gb_kala.Name = "gb_kala";
+            gb_kala.Size = new Size(261, 305);
+            gb_kala.TabIndex = 13;
+            gb_kala.TabStop = false;
+            gb_kala.Text = "groupBox2";
             // 
             // groupBox3
             // 
@@ -394,7 +394,7 @@
             Controls.Add(panel1);
             Controls.Add(statusStrip1);
             Controls.Add(groupBox3);
-            Controls.Add(groupBox2);
+            Controls.Add(gb_kala);
             Controls.Add(groupBox1);
             Controls.Add(button11);
             Controls.Add(button8);
@@ -404,7 +404,7 @@
             Text = "Form1";
             Load += Form1_Load;
             groupBox1.ResumeLayout(false);
-            groupBox2.ResumeLayout(false);
+            gb_kala.ResumeLayout(false);
             groupBox3.ResumeLayout(false);
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
@@ -421,18 +421,18 @@
 
         #endregion
         private Button button2;
-        private Button button3;
-        private Button button4;
+        private Button sabt_kala;
+        private Button namayesh_kala;
         private Button button5;
         private Button button6;
         private Button button7;
         private Button button8;
-        private Button button10;
+        private Button virayesh_kala;
         private Button button11;
         private Button button1;
         private Button button9;
         private GroupBox groupBox1;
-        private GroupBox groupBox2;
+        private GroupBox gb_kala;
         private GroupBox groupBox3;
         private MenuStrip menuStrip1;
         private ToolStripMenuItem تنظیماتToolStripMenuItem;

@@ -47,20 +47,21 @@ namespace Form1
 
         private void button3_Click(object sender, EventArgs e)
         {
-            Form5 form5 = new Form5();
-            form5.ShowDialog();
+            Form5 sabtKala = new Form5();
+            sabtKala.ShowDialog();
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
-            Form6 form6 = new Form6();
-            form6.ShowDialog();
+            Form6 namayeshKala = new Form6();
+            namayeshKala.ShowDialog();
         }
 
         private void button10_Click(object sender, EventArgs e)
         {
-            Form7 form7 = new Form7();
-            form7.ShowDialog();
+
+            Form7 virayeshKala = new Form7();
+            virayeshKala.ShowDialog();
         }
     }
 }
