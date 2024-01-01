@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form6));
             list_kala = new ListBox();
             label7 = new Label();
             label6 = new Label();
@@ -94,7 +95,7 @@
             // 
             label6.AutoSize = true;
             label6.Font = new Font("Mj_Heritage Two Bold", 25.8000011F, FontStyle.Bold, GraphicsUnit.Point);
-            label6.Location = new Point(142, 11);
+            label6.Location = new Point(150, 68);
             label6.Name = "label6";
             label6.RightToLeft = RightToLeft.Yes;
             label6.Size = new Size(161, 57);
@@ -103,13 +104,17 @@
             // 
             // bazgasht
             // 
+            bazgasht.BackColor = SystemColors.ActiveCaption;
+            bazgasht.BackgroundImage = (Image)resources.GetObject("bazgasht.BackgroundImage");
+            bazgasht.BackgroundImageLayout = ImageLayout.Center;
+            bazgasht.FlatAppearance.BorderSize = 0;
+            bazgasht.FlatStyle = FlatStyle.Flat;
             bazgasht.Font = new Font("Mj_Heritage Two Bold", 25.8000011F, FontStyle.Bold, GraphicsUnit.Point);
-            bazgasht.Location = new Point(647, 9);
+            bazgasht.Location = new Point(1, 9);
             bazgasht.Name = "bazgasht";
-            bazgasht.Size = new Size(157, 59);
+            bazgasht.Size = new Size(117, 110);
             bazgasht.TabIndex = 43;
-            bazgasht.Text = "بازگشت";
-            bazgasht.UseVisualStyleBackColor = true;
+            bazgasht.UseVisualStyleBackColor = false;
             bazgasht.Click += button1_Click;
             // 
             // reset
@@ -126,7 +131,7 @@
             // groupBox2
             // 
             groupBox2.Controls.Add(list_kala);
-            groupBox2.Location = new Point(12, 67);
+            groupBox2.Location = new Point(12, 128);
             groupBox2.Name = "groupBox2";
             groupBox2.Size = new Size(432, 674);
             groupBox2.TabIndex = 49;
@@ -164,7 +169,7 @@
             groupBox1.Controls.Add(tb_code_kala);
             groupBox1.Controls.Add(tb_gheymat_kala);
             groupBox1.Controls.Add(gheymat_kala);
-            groupBox1.Location = new Point(450, 79);
+            groupBox1.Location = new Point(450, 128);
             groupBox1.Name = "groupBox1";
             groupBox1.RightToLeft = RightToLeft.Yes;
             groupBox1.Size = new Size(1147, 662);
@@ -463,9 +468,9 @@
             BackColor = SystemColors.ActiveCaption;
             ClientSize = new Size(1634, 802);
             Controls.Add(groupBox1);
+            Controls.Add(bazgasht);
             Controls.Add(reset);
             Controls.Add(groupBox2);
-            Controls.Add(bazgasht);
             Controls.Add(label7);
             Controls.Add(label6);
             Name = "Form6";

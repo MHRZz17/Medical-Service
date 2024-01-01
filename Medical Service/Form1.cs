@@ -63,5 +63,25 @@ namespace Form1
             Form7 virayeshKala = new Form7();
             virayeshKala.ShowDialog();
         }
+
+        private void splitContainer1_Panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void toolStripButton1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toolStripContainer2_TopToolStripPanel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toolStripContainer2_ContentPanel_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
