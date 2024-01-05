@@ -47,8 +47,8 @@ namespace Form1
 
         private void button3_Click(object sender, EventArgs e)
         {
-            Form5 sabtKala = new Form5();
-            sabtKala.ShowDialog();
+            MenuMahsolat menuMahsolat = new MenuMahsolat();
+            menuMahsolat.ShowDialog();
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -82,6 +82,30 @@ namespace Form1
         private void toolStripContainer2_ContentPanel_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void button3_Click_1(object sender, EventArgs e)
+        {
+            MenuMahsolat menuMahsolat = new MenuMahsolat();
+            menuMahsolat.ShowDialog();
+        }
+
+        private void button4_Click_1(object sender, EventArgs e)
+        {
+            MenuMoshtarian menuMoshtarian = new MenuMoshtarian();
+            menuMoshtarian.ShowDialog();
+        }
+
+        private void button6_Click_1(object sender, EventArgs e)
+        {
+            MenuSefareshat menuSefareshat = new MenuSefareshat();
+            menuSefareshat.ShowDialog();
+        }
+
+        private void btn_modiriat_anbar_Click(object sender, EventArgs e)
+        {
+            ModiriatAnbar modiriatAnbar = new ModiriatAnbar();
+            modiriatAnbar.ShowDialog();
         }
     }
 }
