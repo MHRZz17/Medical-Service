@@ -11,7 +11,8 @@ namespace Form1
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            FirstLogin firstLogin = new FirstLogin();
+            firstLogin.ShowDialog();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -106,6 +107,17 @@ namespace Form1
         {
             ModiriatAnbar modiriatAnbar = new ModiriatAnbar();
             modiriatAnbar.ShowDialog();
+        }
+
+        private void lb_khoroj_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_panel_modiriat_Click(object sender, EventArgs e)
+        {
+            PanelModiriat panelModiriat = new PanelModiriat();
+            panelModiriat.ShowDialog();
         }
     }
 }

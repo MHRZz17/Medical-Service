@@ -32,13 +32,14 @@
             btn_khoroj = new Button();
             button8 = new Button();
             button11 = new Button();
-            button12 = new Button();
+            btn_panel_modiriat = new Button();
             button13 = new Button();
             btn_modiriat_anbar = new Button();
             button15 = new Button();
             lb_khoroj = new Label();
             toolStripContainer2 = new ToolStripContainer();
             gb_menu = new GroupBox();
+            lb_panel_modiriat = new Label();
             lb_modiriat_anbar = new Label();
             btn_mahsolat = new Button();
             lb_sefareshat = new Label();
@@ -75,7 +76,7 @@
             btn_khoroj.FlatAppearance.BorderSize = 0;
             btn_khoroj.FlatStyle = FlatStyle.Flat;
             btn_khoroj.Font = new Font("Mj_Heritage Two Bold", 16.2F, FontStyle.Bold, GraphicsUnit.Point);
-            btn_khoroj.Location = new Point(1176, 55);
+            btn_khoroj.Location = new Point(21, 51);
             btn_khoroj.Name = "btn_khoroj";
             btn_khoroj.RightToLeft = RightToLeft.Yes;
             btn_khoroj.Size = new Size(111, 102);
@@ -104,15 +105,19 @@
             button11.Text = "ثبت بیمارستان";
             button11.UseVisualStyleBackColor = true;
             // 
-            // button12
+            // btn_panel_modiriat
             // 
-            button12.Font = new Font("Mj_Heritage Two Bold", 16.2F, FontStyle.Bold, GraphicsUnit.Point);
-            button12.Location = new Point(24, 507);
-            button12.Name = "button12";
-            button12.Size = new Size(181, 80);
-            button12.TabIndex = 23;
-            button12.Text = "پنل مدیریت";
-            button12.UseVisualStyleBackColor = true;
+            btn_panel_modiriat.BackgroundImage = (Image)resources.GetObject("btn_panel_modiriat.BackgroundImage");
+            btn_panel_modiriat.BackgroundImageLayout = ImageLayout.Center;
+            btn_panel_modiriat.FlatAppearance.BorderSize = 0;
+            btn_panel_modiriat.FlatStyle = FlatStyle.Flat;
+            btn_panel_modiriat.Font = new Font("Mj_Heritage Two Bold", 16.2F, FontStyle.Bold, GraphicsUnit.Point);
+            btn_panel_modiriat.Location = new Point(532, 53);
+            btn_panel_modiriat.Name = "btn_panel_modiriat";
+            btn_panel_modiriat.Size = new Size(108, 107);
+            btn_panel_modiriat.TabIndex = 23;
+            btn_panel_modiriat.UseVisualStyleBackColor = true;
+            btn_panel_modiriat.Click += btn_panel_modiriat_Click;
             // 
             // button13
             // 
@@ -131,7 +136,7 @@
             btn_modiriat_anbar.FlatAppearance.BorderSize = 0;
             btn_modiriat_anbar.FlatStyle = FlatStyle.Flat;
             btn_modiriat_anbar.Font = new Font("Mj_Heritage Two Bold", 16.2F, FontStyle.Bold, GraphicsUnit.Point);
-            btn_modiriat_anbar.Location = new Point(508, 52);
+            btn_modiriat_anbar.Location = new Point(1166, 55);
             btn_modiriat_anbar.Name = "btn_modiriat_anbar";
             btn_modiriat_anbar.Size = new Size(123, 107);
             btn_modiriat_anbar.TabIndex = 25;
@@ -153,11 +158,12 @@
             lb_khoroj.AutoSize = true;
             lb_khoroj.BackColor = SystemColors.Control;
             lb_khoroj.Font = new Font("Mj_Heritage Two Bold", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
-            lb_khoroj.Location = new Point(1204, 160);
+            lb_khoroj.Location = new Point(49, 156);
             lb_khoroj.Name = "lb_khoroj";
             lb_khoroj.Size = new Size(55, 29);
             lb_khoroj.TabIndex = 28;
             lb_khoroj.Text = "خروج";
+            lb_khoroj.Click += lb_khoroj_Click;
             // 
             // toolStripContainer2
             // 
@@ -170,7 +176,6 @@
             toolStripContainer2.ContentPanel.Controls.Add(toolStrip1);
             toolStripContainer2.ContentPanel.Controls.Add(button15);
             toolStripContainer2.ContentPanel.Controls.Add(button13);
-            toolStripContainer2.ContentPanel.Controls.Add(button12);
             toolStripContainer2.ContentPanel.Controls.Add(button11);
             toolStripContainer2.ContentPanel.Controls.Add(button8);
             toolStripContainer2.ContentPanel.Size = new Size(1359, 706);
@@ -194,30 +199,44 @@
             // gb_menu
             // 
             gb_menu.BackColor = SystemColors.Control;
+            gb_menu.Controls.Add(lb_panel_modiriat);
             gb_menu.Controls.Add(lb_modiriat_anbar);
             gb_menu.Controls.Add(btn_mahsolat);
             gb_menu.Controls.Add(lb_sefareshat);
             gb_menu.Controls.Add(lb_khoroj);
+            gb_menu.Controls.Add(btn_panel_modiriat);
             gb_menu.Controls.Add(btn_modiriat_anbar);
             gb_menu.Controls.Add(lb_moshtarian);
             gb_menu.Controls.Add(btn_sefareshat);
             gb_menu.Controls.Add(lb_mahsolat);
             gb_menu.Controls.Add(btn_moshtarian);
             gb_menu.Controls.Add(btn_khoroj);
-            gb_menu.Font = new Font("Mj_Heritage Two Bold", 16.2F, FontStyle.Bold, GraphicsUnit.Point);
+            gb_menu.Font = new Font("Mj_Heritage Two Bold", 24F, FontStyle.Bold, GraphicsUnit.Point);
             gb_menu.Location = new Point(24, 63);
             gb_menu.Name = "gb_menu";
+            gb_menu.RightToLeft = RightToLeft.Yes;
             gb_menu.Size = new Size(1310, 200);
             gb_menu.TabIndex = 39;
             gb_menu.TabStop = false;
             gb_menu.Text = "منو";
+            // 
+            // lb_panel_modiriat
+            // 
+            lb_panel_modiriat.AutoSize = true;
+            lb_panel_modiriat.BackColor = SystemColors.Control;
+            lb_panel_modiriat.Font = new Font("Mj_Heritage Two Bold", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
+            lb_panel_modiriat.Location = new Point(532, 163);
+            lb_panel_modiriat.Name = "lb_panel_modiriat";
+            lb_panel_modiriat.Size = new Size(102, 29);
+            lb_panel_modiriat.TabIndex = 40;
+            lb_panel_modiriat.Text = " پنل مدیریت";
             // 
             // lb_modiriat_anbar
             // 
             lb_modiriat_anbar.AutoSize = true;
             lb_modiriat_anbar.BackColor = SystemColors.Control;
             lb_modiriat_anbar.Font = new Font("Mj_Heritage Two Bold", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
-            lb_modiriat_anbar.Location = new Point(517, 160);
+            lb_modiriat_anbar.Location = new Point(1175, 163);
             lb_modiriat_anbar.Name = "lb_modiriat_anbar";
             lb_modiriat_anbar.Size = new Size(103, 29);
             lb_modiriat_anbar.TabIndex = 39;
@@ -231,7 +250,7 @@
             btn_mahsolat.FlatAppearance.BorderSize = 0;
             btn_mahsolat.FlatStyle = FlatStyle.Flat;
             btn_mahsolat.Font = new Font("Mj_Heritage Two Bold", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
-            btn_mahsolat.Location = new Point(35, 55);
+            btn_mahsolat.Location = new Point(693, 58);
             btn_mahsolat.Name = "btn_mahsolat";
             btn_mahsolat.Size = new Size(102, 104);
             btn_mahsolat.TabIndex = 34;
@@ -243,7 +262,7 @@
             lb_sefareshat.AutoSize = true;
             lb_sefareshat.BackColor = SystemColors.Control;
             lb_sefareshat.Font = new Font("Mj_Heritage Two Bold", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
-            lb_sefareshat.Location = new Point(354, 160);
+            lb_sefareshat.Location = new Point(1012, 163);
             lb_sefareshat.Name = "lb_sefareshat";
             lb_sefareshat.Size = new Size(81, 29);
             lb_sefareshat.TabIndex = 36;
@@ -254,7 +273,7 @@
             lb_moshtarian.AutoSize = true;
             lb_moshtarian.BackColor = SystemColors.Control;
             lb_moshtarian.Font = new Font("Mj_Heritage Two Bold", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
-            lb_moshtarian.Location = new Point(202, 160);
+            lb_moshtarian.Location = new Point(860, 163);
             lb_moshtarian.Name = "lb_moshtarian";
             lb_moshtarian.Size = new Size(76, 29);
             lb_moshtarian.TabIndex = 38;
@@ -268,7 +287,7 @@
             btn_sefareshat.FlatAppearance.BorderSize = 0;
             btn_sefareshat.FlatStyle = FlatStyle.Flat;
             btn_sefareshat.Font = new Font("Mj_Heritage Two Bold", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
-            btn_sefareshat.Location = new Point(339, 48);
+            btn_sefareshat.Location = new Point(997, 51);
             btn_sefareshat.Name = "btn_sefareshat";
             btn_sefareshat.Size = new Size(116, 109);
             btn_sefareshat.TabIndex = 35;
@@ -280,7 +299,7 @@
             lb_mahsolat.AutoSize = true;
             lb_mahsolat.BackColor = SystemColors.Control;
             lb_mahsolat.Font = new Font("Mj_Heritage Two Bold", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
-            lb_mahsolat.Location = new Point(35, 160);
+            lb_mahsolat.Location = new Point(693, 163);
             lb_mahsolat.Name = "lb_mahsolat";
             lb_mahsolat.Size = new Size(95, 29);
             lb_mahsolat.TabIndex = 37;
@@ -294,7 +313,7 @@
             btn_moshtarian.FlatAppearance.BorderSize = 0;
             btn_moshtarian.FlatStyle = FlatStyle.Flat;
             btn_moshtarian.Font = new Font("Mj_Heritage Two Bold", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
-            btn_moshtarian.Location = new Point(178, 55);
+            btn_moshtarian.Location = new Point(836, 58);
             btn_moshtarian.Name = "btn_moshtarian";
             btn_moshtarian.RightToLeft = RightToLeft.Yes;
             btn_moshtarian.Size = new Size(129, 104);
@@ -304,12 +323,16 @@
             // 
             // toolStrip1
             // 
+            toolStrip1.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            toolStrip1.Dock = DockStyle.None;
+            toolStrip1.Font = new Font("Mj_Heritage Two Bold", 12F, FontStyle.Bold, GraphicsUnit.Point);
             toolStrip1.GripStyle = ToolStripGripStyle.Hidden;
             toolStrip1.ImageScalingSize = new Size(20, 20);
             toolStrip1.Items.AddRange(new ToolStripItem[] { toolStripButton1, toolStripSplitButton1, newToolStripButton, openToolStripButton, saveToolStripButton, printToolStripButton, toolStripSeparator, cutToolStripButton, copyToolStripButton, pasteToolStripButton, toolStripSeparator1, helpToolStripButton });
-            toolStrip1.Location = new Point(0, 0);
+            toolStrip1.Location = new Point(1044, 0);
             toolStrip1.Name = "toolStrip1";
-            toolStrip1.Size = new Size(1359, 27);
+            toolStrip1.RightToLeft = RightToLeft.Yes;
+            toolStrip1.Size = new Size(315, 27);
             toolStrip1.TabIndex = 21;
             toolStrip1.Text = "toolStrip1";
             // 
@@ -336,13 +359,13 @@
             // toolStripMenuItem1
             // 
             toolStripMenuItem1.Name = "toolStripMenuItem1";
-            toolStripMenuItem1.Size = new Size(225, 26);
+            toolStripMenuItem1.Size = new Size(282, 30);
             toolStripMenuItem1.Text = "toolStripMenuItem1";
             // 
             // toolStripMenuItem2
             // 
             toolStripMenuItem2.Name = "toolStripMenuItem2";
-            toolStripMenuItem2.Size = new Size(225, 26);
+            toolStripMenuItem2.Size = new Size(282, 30);
             toolStripMenuItem2.Text = "toolStripMenuItem2";
             // 
             // newToolStripButton
@@ -455,7 +478,7 @@
         private Button btn_khoroj;
         private Button button8;
         private Button button11;
-        private Button button12;
+        private Button btn_panel_modiriat;
         private Button button13;
         private Button btn_modiriat_anbar;
         private Button button15;
@@ -484,5 +507,6 @@
         private Label lb_mahsolat;
         private Button btn_moshtarian;
         private Label lb_modiriat_anbar;
+        private Label lb_panel_modiriat;
     }
 }
