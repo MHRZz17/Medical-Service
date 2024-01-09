@@ -62,6 +62,7 @@
             pasteToolStripButton = new ToolStripButton();
             toolStripSeparator1 = new ToolStripSeparator();
             helpToolStripButton = new ToolStripButton();
+            button1 = new Button();
             toolStripContainer2.ContentPanel.SuspendLayout();
             toolStripContainer2.SuspendLayout();
             gb_menu.SuspendLayout();
@@ -172,6 +173,7 @@
             // toolStripContainer2.ContentPanel
             // 
             toolStripContainer2.ContentPanel.AutoScroll = true;
+            toolStripContainer2.ContentPanel.Controls.Add(button1);
             toolStripContainer2.ContentPanel.Controls.Add(gb_menu);
             toolStripContainer2.ContentPanel.Controls.Add(toolStrip1);
             toolStripContainer2.ContentPanel.Controls.Add(button15);
@@ -450,6 +452,16 @@
             helpToolStripButton.Size = new Size(29, 24);
             helpToolStripButton.Text = "He&lp";
             // 
+            // button1
+            // 
+            button1.Font = new Font("Mj_Heritage Two Bold", 16.2F, FontStyle.Bold, GraphicsUnit.Point);
+            button1.Location = new Point(211, 424);
+            button1.Name = "button1";
+            button1.Size = new Size(301, 80);
+            button1.TabIndex = 40;
+            button1.Text = "ارگان ها و بیمارستان ها";
+            button1.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -508,5 +520,6 @@
         private Button btn_moshtarian;
         private Label lb_modiriat_anbar;
         private Label lb_panel_modiriat;
+        private Button button1;
     }
 }

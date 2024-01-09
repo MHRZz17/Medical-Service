@@ -10,14 +10,14 @@ using System.Windows.Forms;
 
 namespace Medical_Service
 {
-    public partial class ModiriatAnbar : Form
+    public partial class SabtSefaresh : Form
     {
-        public ModiriatAnbar()
+        public SabtSefaresh()
         {
             InitializeComponent();
         }
 
-        private void domainUpDown1_SelectedItemChanged(object sender, EventArgs e)
+        private void label1_Click(object sender, EventArgs e)
         {
 
         }
