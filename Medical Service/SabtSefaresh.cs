@@ -21,5 +21,25 @@ namespace Medical_Service
         {
 
         }
+
+        private void btn_khoroj_Click(object sender, EventArgs e)
+        {
+            {
+                DialogResult result = MessageBox.Show("آیا مطمیین هستید که میخوایید خارج شوید؟", "خروج", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (result == DialogResult.Yes)
+                {
+                    Application.Exit();
+                }
+                else
+                {
+                    return;
+                }
+            }
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -33,7 +33,7 @@ namespace Medical_Service
             tb_germaj_kala.Text = string.Empty;
             tb_gheymat_kala.Text = string.Empty;
             tb_rang_kala.Text = string.Empty;
-            tb_tedad_kala.Text = string.Empty;
+            nud_tedad_kala.Text = string.Empty;
             tb_tole_kala.Text = string.Empty;
             tb_vazn_kala.Text = string.Empty;
             tb_tozihat_kala.Text = string.Empty;
@@ -54,7 +54,9 @@ namespace Medical_Service
 
         private void Form6_Load(object sender, EventArgs e)
         {
-            SqlConnection sc = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=""E:\Program Files\Medical Service\Medical Service\MedicalService.mdf"";Integrated Security=True");
+            SqlConnection sc =
+new SqlConnection(
+@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=E:\Program Files\Medical Service\Medical Service\MedicalService.mdf;Integrated Security=True");
             sc.Open();
             string query = "SELECT k_nam FROM kala";
             SqlCommand command = new SqlCommand(query, sc);
@@ -62,10 +64,57 @@ namespace Medical_Service
             while (reader.Read())
             {
                 string nam = reader["k_nam"].ToString();
-                list_kala.Items.Add(nam);
+                list_mahsolat.Items.Add(nam);
             }
 
             sc.Close();
         }
+
+        private void list_mahsolat_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            SqlConnection sc =
+new SqlConnection(
+@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=E:\Program Files\Medical Service\Medical Service\MedicalService.mdf;Integrated Security=True");
+            sc.Open();
+            string query = "SELECT * FROM mahsolat";
+            SqlCommand command = new SqlCommand(query, sc);
+            SqlDataReader reader = command.ExecuteReader();
+
+            string kala = list_mahsolat.SelectedItem.ToString();
+            while (reader.Read())
+            {
+                if (kala == reader["k_nam"].ToString())
+                {
+                    tb_arze_kala.Text = reader["k_arz"].ToString();
+                    tb_brand_parche.Text = reader["k_brand_parche"].ToString();
+                    tb_code_kala.Text = reader["k_code"].ToString();
+                    tb_germaj_kala.Text = reader["k_germaj"].ToString();
+                    tb_gheymat_kala.Text = reader["k_gheymat"].ToString();
+                    tb_nam_kala.Text = reader["k_nam"].ToString();
+                    tb_rang_kala.Text = reader["k_rang"].ToString();
+                    tb_tole_kala.Text = reader["k_tol"].ToString();
+                    tb_tozihat_kala.Text = reader["k_tozihat"].ToString();
+                    tb_vazn_kala.Text = reader["k_vazn"].ToString();
+                    cb_size_kala.Text = reader["k_size"].ToString();
+                    cb_vahed_kala.Text = reader["k_vahed"].ToString();
+                    nud_tedad_kala.Text = reader["k_tedad"].ToString();
+
+                }
+            }
+            sc.Close();
+        }
+
+        private void btn_bazgasht_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            MenuMahsolat menuMahsolat = new MenuMahsolat();
+            menuMahsolat.Show();
+        }
+
+        private void btn_khoroj_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
+

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -29,7 +30,7 @@ namespace Medical_Service
 
         private void FirstLogin_Load(object sender, EventArgs e)
         {
-            MessageBox.Show("سلام!به نرم افزار مدیپوش خوش آمدید!\nلطفا ابتدا نام کاربری و رمز عبور خود را وارد کنید");
+
         }
 
         private void btn_khoroj_Click(object sender, EventArgs e)
@@ -47,13 +48,54 @@ namespace Medical_Service
 
         private void btn_vorod1_Click(object sender, EventArgs e)
         {
-            this.Close();
+            string username = tb_username.Text;
+            string pass = tb_pass.Text;
+            try
+            {
+                SqlConnection sc =
+    new SqlConnection(
+        @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=E:\Program Files\Medical Service\Medical Service\MedicalService.mdf;Integrated Security=True");
+                sc.Open();
+                string query = "SELECT ad_username,ad_ramz FROM admin";
+                SqlCommand command = new SqlCommand(query, sc);
+                SqlDataReader reader = command.ExecuteReader();
+                while (reader.Read())
+                {
+                    string nam_karbari = reader["ad_username"].ToString();
+                    string ramz = reader["ad_ramz"].ToString();
+                    if (nam_karbari == username && ramz == pass)
+                    {
+                        this.Hide();
+                        SafheAsli safheAsli = new SafheAsli();
+                        safheAsli.Show();
+                    }
+                    else
+                    {
+                        MessageBox.Show("نام کاربری یا رمز عبور اشتباه است!!!");
+                        tb_username.Clear(); tb_pass.Clear();
+                        return;
+                    }
+                }
+
+                sc.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("خطایی رخ داده است!!!");
+                tb_username.Clear(); tb_pass.Clear();
+                return;
+            }
         }
 
         private void btn_faramoshi_Click(object sender, EventArgs e)
         {
             FaramoshiRamz faramoshiRamz = new FaramoshiRamz();
-            faramoshiRamz.ShowDialog();
+            faramoshiRamz.Show();
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

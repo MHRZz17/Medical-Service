@@ -16,5 +16,26 @@ namespace Medical_Service
         {
             InitializeComponent();
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btn_sabt_moshtari_Click(object sender, EventArgs e)
+        {
+            SabtSefaresh sabtSefaresh = new SabtSefaresh();
+            sabtSefaresh.Show();
+        }
     }
 }

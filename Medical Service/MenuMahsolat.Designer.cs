@@ -28,84 +28,183 @@
         /// </summary>
         private void InitializeComponent()
         {
-            btn_sabt_mahsolat = new Button();
-            btn_virayesh_mahsolat = new Button();
-            btn_list_mahsolat = new Button();
-            lb_mahsolat = new Label();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MenuMahsolat));
+            panel2 = new Panel();
+            pictureBox2 = new PictureBox();
+            label1 = new Label();
+            button4 = new Button();
+            lb_list_moshtari = new Label();
+            lb_virayesh_moshtari = new Label();
+            btn_virayesh_moshtari = new Button();
+            btn_list_moshtari = new Button();
+            lb_sabt_moshtari = new Label();
+            btn_sabt_moshtari = new Button();
+            panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             SuspendLayout();
             // 
-            // btn_sabt_mahsolat
+            // panel2
             // 
-            btn_sabt_mahsolat.BackColor = SystemColors.ControlLightLight;
-            btn_sabt_mahsolat.BackgroundImageLayout = ImageLayout.None;
-            btn_sabt_mahsolat.FlatAppearance.BorderSize = 0;
-            btn_sabt_mahsolat.Font = new Font("Mj_Heritage Two Bold", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
-            btn_sabt_mahsolat.Location = new Point(24, 118);
-            btn_sabt_mahsolat.Name = "btn_sabt_mahsolat";
-            btn_sabt_mahsolat.Size = new Size(448, 75);
-            btn_sabt_mahsolat.TabIndex = 31;
-            btn_sabt_mahsolat.Text = "ثبت محصول";
-            btn_sabt_mahsolat.UseVisualStyleBackColor = false;
-            btn_sabt_mahsolat.Click += btn_sabt_mahsolat_Click;
+            panel2.BackColor = Color.MidnightBlue;
+            panel2.Controls.Add(pictureBox2);
+            panel2.Controls.Add(label1);
+            panel2.Controls.Add(button4);
+            panel2.Location = new Point(0, 1);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(734, 71);
+            panel2.TabIndex = 90;
             // 
-            // btn_virayesh_mahsolat
+            // pictureBox2
             // 
-            btn_virayesh_mahsolat.BackColor = SystemColors.ControlLightLight;
-            btn_virayesh_mahsolat.BackgroundImageLayout = ImageLayout.None;
-            btn_virayesh_mahsolat.FlatAppearance.BorderSize = 0;
-            btn_virayesh_mahsolat.Font = new Font("Mj_Heritage Two Bold", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
-            btn_virayesh_mahsolat.Location = new Point(24, 211);
-            btn_virayesh_mahsolat.Name = "btn_virayesh_mahsolat";
-            btn_virayesh_mahsolat.Size = new Size(448, 76);
-            btn_virayesh_mahsolat.TabIndex = 34;
-            btn_virayesh_mahsolat.Text = "ویرایش محصولات";
-            btn_virayesh_mahsolat.UseVisualStyleBackColor = false;
-            btn_virayesh_mahsolat.Click += btn_virayesh_mahsolat_Click;
+            pictureBox2.BackgroundImage = (Image)resources.GetObject("pictureBox2.BackgroundImage");
+            pictureBox2.BackgroundImageLayout = ImageLayout.Center;
+            pictureBox2.Location = new Point(650, 3);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(72, 61);
+            pictureBox2.TabIndex = 86;
+            pictureBox2.TabStop = false;
             // 
-            // btn_list_mahsolat
+            // label1
             // 
-            btn_list_mahsolat.BackgroundImageLayout = ImageLayout.None;
-            btn_list_mahsolat.Font = new Font("Mj_Heritage Two Bold", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
-            btn_list_mahsolat.Location = new Point(24, 304);
-            btn_list_mahsolat.Name = "btn_list_mahsolat";
-            btn_list_mahsolat.Size = new Size(448, 71);
-            btn_list_mahsolat.TabIndex = 33;
-            btn_list_mahsolat.Text = "لیست محصولات";
-            btn_list_mahsolat.UseVisualStyleBackColor = true;
-            btn_list_mahsolat.Click += btn_list_mahsolat_Click;
+            label1.AutoSize = true;
+            label1.BackColor = Color.MidnightBlue;
+            label1.Font = new Font("Mj_Heritage Two Bold", 24F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.ForeColor = SystemColors.ButtonFace;
+            label1.Location = new Point(443, 9);
+            label1.Name = "label1";
+            label1.Size = new Size(211, 52);
+            label1.TabIndex = 81;
+            label1.Text = "منو محصولات";
             // 
-            // lb_mahsolat
+            // button4
             // 
-            lb_mahsolat.AutoSize = true;
-            lb_mahsolat.BackColor = SystemColors.ActiveCaption;
-            lb_mahsolat.Font = new Font("Mj_Heritage Two Bold", 24F, FontStyle.Bold, GraphicsUnit.Point);
-            lb_mahsolat.Location = new Point(66, 28);
-            lb_mahsolat.Name = "lb_mahsolat";
-            lb_mahsolat.Size = new Size(359, 52);
-            lb_mahsolat.TabIndex = 38;
-            lb_mahsolat.Text = " :گزینه مورد را انتخاب کنید";
+            button4.BackColor = Color.MidnightBlue;
+            button4.BackgroundImage = (Image)resources.GetObject("button4.BackgroundImage");
+            button4.BackgroundImageLayout = ImageLayout.Center;
+            button4.FlatAppearance.BorderSize = 0;
+            button4.FlatStyle = FlatStyle.Flat;
+            button4.Font = new Font("Mj_Heritage Two Bold", 16.2F, FontStyle.Bold, GraphicsUnit.Point);
+            button4.Location = new Point(3, 0);
+            button4.Name = "button4";
+            button4.RightToLeft = RightToLeft.Yes;
+            button4.Size = new Size(62, 61);
+            button4.TabIndex = 41;
+            button4.UseVisualStyleBackColor = false;
+            button4.Click += button4_Click;
+            // 
+            // lb_list_moshtari
+            // 
+            lb_list_moshtari.AutoSize = true;
+            lb_list_moshtari.BackColor = SystemColors.GradientInactiveCaption;
+            lb_list_moshtari.Font = new Font("Mj_Heritage Two Bold", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point);
+            lb_list_moshtari.Location = new Point(411, 401);
+            lb_list_moshtari.Name = "lb_list_moshtari";
+            lb_list_moshtari.Size = new Size(199, 44);
+            lb_list_moshtari.TabIndex = 96;
+            lb_list_moshtari.Text = "لیست محصولات";
+            // 
+            // lb_virayesh_moshtari
+            // 
+            lb_virayesh_moshtari.AutoSize = true;
+            lb_virayesh_moshtari.BackColor = SystemColors.GradientInactiveCaption;
+            lb_virayesh_moshtari.Font = new Font("Mj_Heritage Two Bold", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point);
+            lb_virayesh_moshtari.Location = new Point(402, 272);
+            lb_virayesh_moshtari.Name = "lb_virayesh_moshtari";
+            lb_virayesh_moshtari.Size = new Size(217, 44);
+            lb_virayesh_moshtari.TabIndex = 95;
+            lb_virayesh_moshtari.Text = "ویرایش محصولات";
+            // 
+            // btn_virayesh_moshtari
+            // 
+            btn_virayesh_moshtari.BackColor = SystemColors.GradientInactiveCaption;
+            btn_virayesh_moshtari.BackgroundImage = (Image)resources.GetObject("btn_virayesh_moshtari.BackgroundImage");
+            btn_virayesh_moshtari.BackgroundImageLayout = ImageLayout.Center;
+            btn_virayesh_moshtari.FlatAppearance.BorderSize = 0;
+            btn_virayesh_moshtari.FlatStyle = FlatStyle.Flat;
+            btn_virayesh_moshtari.Font = new Font("Mj_Heritage Two Bold", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
+            btn_virayesh_moshtari.Location = new Point(84, 253);
+            btn_virayesh_moshtari.Name = "btn_virayesh_moshtari";
+            btn_virayesh_moshtari.Size = new Size(546, 86);
+            btn_virayesh_moshtari.TabIndex = 93;
+            btn_virayesh_moshtari.UseVisualStyleBackColor = false;
+            btn_virayesh_moshtari.Click += btn_virayesh_moshtari_Click;
+            // 
+            // btn_list_moshtari
+            // 
+            btn_list_moshtari.BackColor = SystemColors.GradientInactiveCaption;
+            btn_list_moshtari.BackgroundImage = (Image)resources.GetObject("btn_list_moshtari.BackgroundImage");
+            btn_list_moshtari.BackgroundImageLayout = ImageLayout.Center;
+            btn_list_moshtari.FlatAppearance.BorderSize = 0;
+            btn_list_moshtari.FlatStyle = FlatStyle.Flat;
+            btn_list_moshtari.Font = new Font("Mj_Heritage Two Bold", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
+            btn_list_moshtari.Location = new Point(84, 381);
+            btn_list_moshtari.Name = "btn_list_moshtari";
+            btn_list_moshtari.Size = new Size(546, 89);
+            btn_list_moshtari.TabIndex = 92;
+            btn_list_moshtari.UseVisualStyleBackColor = false;
+            btn_list_moshtari.Click += btn_list_moshtari_Click;
+            // 
+            // lb_sabt_moshtari
+            // 
+            lb_sabt_moshtari.AutoSize = true;
+            lb_sabt_moshtari.BackColor = SystemColors.GradientInactiveCaption;
+            lb_sabt_moshtari.Font = new Font("Mj_Heritage Two Bold", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point);
+            lb_sabt_moshtari.Location = new Point(434, 143);
+            lb_sabt_moshtari.Name = "lb_sabt_moshtari";
+            lb_sabt_moshtari.Size = new Size(159, 44);
+            lb_sabt_moshtari.TabIndex = 94;
+            lb_sabt_moshtari.Text = "ثبت محصول";
+            // 
+            // btn_sabt_moshtari
+            // 
+            btn_sabt_moshtari.BackColor = SystemColors.GradientInactiveCaption;
+            btn_sabt_moshtari.BackgroundImage = (Image)resources.GetObject("btn_sabt_moshtari.BackgroundImage");
+            btn_sabt_moshtari.BackgroundImageLayout = ImageLayout.Zoom;
+            btn_sabt_moshtari.FlatAppearance.BorderSize = 0;
+            btn_sabt_moshtari.FlatStyle = FlatStyle.Flat;
+            btn_sabt_moshtari.Font = new Font("Mj_Heritage Two Bold", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
+            btn_sabt_moshtari.Location = new Point(84, 125);
+            btn_sabt_moshtari.Name = "btn_sabt_moshtari";
+            btn_sabt_moshtari.RightToLeft = RightToLeft.Yes;
+            btn_sabt_moshtari.Size = new Size(546, 85);
+            btn_sabt_moshtari.TabIndex = 91;
+            btn_sabt_moshtari.UseVisualStyleBackColor = false;
+            btn_sabt_moshtari.Click += btn_sabt_moshtari_Click;
             // 
             // MenuMahsolat
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = SystemColors.ActiveCaption;
-            ClientSize = new Size(498, 385);
-            Controls.Add(lb_mahsolat);
-            Controls.Add(btn_virayesh_mahsolat);
-            Controls.Add(btn_list_mahsolat);
-            Controls.Add(btn_sabt_mahsolat);
+            BackColor = SystemColors.HotTrack;
+            ClientSize = new Size(735, 536);
+            ControlBox = false;
+            Controls.Add(lb_list_moshtari);
+            Controls.Add(lb_virayesh_moshtari);
+            Controls.Add(btn_virayesh_moshtari);
+            Controls.Add(btn_list_moshtari);
+            Controls.Add(lb_sabt_moshtari);
+            Controls.Add(btn_sabt_moshtari);
+            Controls.Add(panel2);
+            FormBorderStyle = FormBorderStyle.None;
             Name = "MenuMahsolat";
             Text = "منو محصولات";
+            panel2.ResumeLayout(false);
+            panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
-
-        private Button btn_sabt_mahsolat;
-        private Button btn_virayesh_mahsolat;
-        private Button btn_list_mahsolat;
-        private Label lb_mahsolat;
+        private Panel panel2;
+        private PictureBox pictureBox2;
+        private Label label1;
+        private Button button4;
+        private Label lb_list_moshtari;
+        private Label lb_virayesh_moshtari;
+        private Button btn_virayesh_moshtari;
+        private Button btn_list_moshtari;
+        private Label lb_sabt_moshtari;
+        private Button btn_sabt_moshtari;
     }
 }
